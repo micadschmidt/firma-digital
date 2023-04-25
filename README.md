@@ -45,3 +45,9 @@ El que quisiera utilizar estas lineas de código deberá escribir los siguientes
 `bundle install` : ejecuta las gemas instaldas.
 `rails db:migrate` : ejecuta las migraciones de base de datos pendientes.
 `rails server` o `rails s` : inicia el servidor de Rails.
+
+Link de acceso:
+[http://localhost:3000/upload]
+
+Link del form:
+[http://localhost:3000/documents/3/sign]
