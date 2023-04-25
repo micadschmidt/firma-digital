@@ -1,3 +1,6 @@
+<!--Esta vista muestra un formulario para que el usuario pueda firmar un documento PDF y maneja los errores que puedan ocurrir durante la validación de los datos ingresados.-->
+
+
 <h1>Firmar documento PDF</h1>
 
 <%= form_with(model: @signature, url: sign_document_path(@document.id), method: :post) do |form| %>
