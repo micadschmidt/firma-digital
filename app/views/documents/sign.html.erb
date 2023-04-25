@@ -1,0 +1,28 @@
+<h1>Firmar documento PDF</h1>
+
+<%= form_with(model: @signature, url: sign_document_path(@document.id), method: :post) do |form| %>
+
+  <%= form.label :name, "Nombre" %>
+  <%= form.text_field :name %>
+
+  <%= form.label :lastname, "Apellido" %>
+  <%= form.text_field :lastname %>
+
+  <%= form.label :date, "Fecha" %>
+  <%= form.date_field :date %>
+
+  <%= form.label :key, "Llave privada" %>
+  <%= form.text_area :key %>
+
+  <%= form.submit "Firmar archivo" %>
+<% end %>
+
+<% if @signature.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@signature.errors.count, "error") %> prohibieron que se guarde la firma:</h2>
+    <ul>
+    <% @signature.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+<% end %>
